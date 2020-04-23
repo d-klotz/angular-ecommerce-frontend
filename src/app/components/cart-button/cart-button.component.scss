@@ -1,0 +1,18 @@
+.cart-button {
+  background-color: #6548eb;
+  color: white;
+  height: 35px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+}
+.cart-button:hover,
+.cart-button:focus {
+  background-color: #472eb6;
+  outline: none;
+}
+
+.cart-button:active {
+  transform: scale(0.99);
+}
