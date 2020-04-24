@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./categories.component.scss']
 })
 export class CategoriesComponent implements OnInit {
+  public categories = ['Macbooks', 'iMacs', 'iPads', 'iPhones', 'Accessories'];
 
   constructor() { }
 

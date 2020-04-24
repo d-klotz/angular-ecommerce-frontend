@@ -19,6 +19,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { CartButtonComponent } from './components/cart-button/cart-button.component';
 import { BagComponent } from './components/bag/bag.component';
 import { CategoriesComponent } from './components/categories/categories.component';
+import { ChipComponent } from './components/chip/chip.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { CategoriesComponent } from './components/categories/categories.componen
     CartButtonComponent,
     BagComponent,
     CategoriesComponent,
+    ChipComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,

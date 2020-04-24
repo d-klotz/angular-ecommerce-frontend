@@ -6,7 +6,39 @@
   background-color: white;
   padding: 5px;
   font-size: 16px;
+  padding-left: 40px;
 }
+
+.search-icon {
+  position: absolute;
+  padding-top: 8px;
+  color:  #808080;
+  left: 25px;
+}
+
+@media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 2000px) {
+    .search-bar {
+      width: 60%;
+      height: 25px;
+    }
+    .search-icon {
+      left: 20%;
+    }
+  }
+
+  @media only screen
+  and (min-device-width: 736px)
+  and (max-device-width: 1200px) {
+    .search-bar {
+      width: 60%;
+      height: 25px;
+    }
+    .search-icon {
+      left: 20%;
+    }
+  }
 
 .search-bar:focus {
   outline:none;

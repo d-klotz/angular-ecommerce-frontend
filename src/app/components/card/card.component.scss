@@ -1,0 +1,63 @@
+.card {
+  height: 350px;
+  width: 300px;
+  background-color: white;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+@media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 2000px) {
+  .card {
+    height: 350px;
+    width: 300px;
+  }
+}
+
+@media only screen
+  and (min-device-width: 736px)
+  and (max-device-width: 1200px){
+  .card {
+    height: 330px;
+    width: 280px;
+  }
+}
+
+@media only screen
+  and (min-device-width: 550px)
+  and (max-device-width: 736px) {
+  .card {
+    height: 300px;
+    width: 250px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+  }
+}
+
+@media only screen
+  and (min-device-width: 340px)
+  and (max-device-width: 550px) {
+  .card {
+    height: 250px;
+    width: 150px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+  }
+}
+
+@media only screen
+  and (min-device-width: 50px)
+  and (max-device-width: 340px) {
+  .card {
+    height: 250px;
+    max-width: 220px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+  }
+}

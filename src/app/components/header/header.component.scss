@@ -9,10 +9,20 @@
 .container-bag {
   display: flex;
   justify-content: flex-end;
-  margin: 30px;
+  margin-right: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .container-search-bar {
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
+
+@media only screen
+  and (min-device-width: 736px)
+  and (max-device-width: 2000px){
+    .container-bag {
+      margin-right: 50px;
+    }
+  }
