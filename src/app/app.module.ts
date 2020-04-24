@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -15,6 +17,8 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { MenuComponent } from './components/menu/menu.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CartButtonComponent } from './components/cart-button/cart-button.component';
+import { BagComponent } from './components/bag/bag.component';
+import { CategoriesComponent } from './components/categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -31,10 +35,13 @@ import { CartButtonComponent } from './components/cart-button/cart-button.compon
     MenuComponent,
     HeaderComponent,
     CartButtonComponent,
+    BagComponent,
+    CategoriesComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
