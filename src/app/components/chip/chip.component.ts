@@ -6,7 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./chip.component.scss']
 })
 export class ChipComponent implements OnInit {
-  @Input() value;
+  @Input() value: string;
+  @Input() modifier?: string;
 
   constructor() { }
 

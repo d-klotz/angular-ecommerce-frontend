@@ -1,5 +1,8 @@
 <div class="categories">
   <div *ngFor="let category of categories" class="category-item">
-      <chip [value]=category></chip>
+      <chip
+      [value]=category
+      modifier="menu-item"
+      ></chip>
   </div>
 </div>

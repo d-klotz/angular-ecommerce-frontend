@@ -8,8 +8,7 @@ import { Product } from 'src/app/models/Product';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  // public products: Product[];
-  public products = [1,2,3,4,5,6,8]
+  public products: Product[];
 
   constructor(
      private productService: ProductService
@@ -17,7 +16,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.productService.getProducstByCategory()
-    .subscribe(products => console.log(products));
+    .subscribe(products => this.products = products.reverse());
   }
 
 }

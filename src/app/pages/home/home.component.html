@@ -3,9 +3,20 @@
     <card>
       <div class="product-item">
         <img
-        src="https://multimedia.bbycastatic.ca/multimedia/products/250x250/145/14517/14517652.jpg"
-        width="120"
-        height="120"/>
+        src={{product.mainImage}}/>
+        <div id="name">{{product.name}}</div>
+        <div id="description">{{product.description}}</div>
+        <div id="price">
+          <chip
+            *ngIf="product.price < 800"
+            value="SALE"
+            modifier="sale"
+          ></chip>
+          <chip
+            [value]=product.price
+            modifier="product-price"
+          ></chip>
+        </div>
       </div>
     </card>
   </div>

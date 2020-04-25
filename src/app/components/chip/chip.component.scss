@@ -1,8 +1,35 @@
-.chip {
+// .chip {
+//   background-color: white;
+//   border-radius: 10px;
+//   color: #f88a30;
+//   font-weight: 600;
+//   height: 20px;
+//   padding: 10px;
+// }
+
+.menu-item {
   background-color: white;
   border-radius: 10px;
   color: #f88a30;
   font-weight: 600;
   height: 20px;
   padding: 10px;
+}
+
+.product-price {
+  background-color: rgb(165, 164, 164);
+  border-radius: 7px;
+  color: #ffffff;
+  font-weight: 500;
+  height: 15px;
+  padding: 5px 10px 10px;
+}
+
+.sale {
+  background-color: #f3cc5f;
+  border-radius: 7px;
+  color: #f88a30;
+  font-weight: 400;
+  height: 15px;
+  padding: 5px 10px 10px;
 }
