@@ -1,8 +1,10 @@
 <div class="categories">
   <div *ngFor="let category of categories" class="category-item">
+    <div (click)="handleClick(category)">
       <chip
-      [value]=category
-      modifier="menu-item"
-      ></chip>
+        [value]=category
+        modifier="menu-item"
+        ></chip>
+    </div>
   </div>
 </div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Category } from 'src/app/models/Category';
+import { ObservableService } from 'src/app/services/observable.service';
 
 @Component({
   selector: 'app-categories',
@@ -6,11 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./categories.component.scss']
 })
 export class CategoriesComponent implements OnInit {
-  public categories = ['Macbooks', 'iMacs', 'iPads', 'iPhones', 'Accessories'];
+  public categories: Category[] = [
+    Category.MACBOOKS,
+    Category.IMACS,
+    Category.IPADS,
+    Category.IPHONES,
+    Category.ACCESSORIES
+  ];
 
-  constructor() { }
+
+  constructor(private observableService: ObservableService) { }
 
   ngOnInit(): void {
   }
 
+  handleClick(category: Category) {
+    this.observableService.changeCategory(category);
+  }
 }
