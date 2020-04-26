@@ -22,6 +22,7 @@ import { BagComponent } from './components/bag/bag.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { ChipComponent } from './components/chip/chip.component';
 import { CardComponent } from './components/card/card.component';
+import { PricePipe } from './pipes/price.pipe';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { CardComponent } from './components/card/card.component';
     CategoriesComponent,
     ChipComponent,
     CardComponent,
+    PricePipe,
   ],
   imports: [
     BrowserModule,
