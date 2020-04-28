@@ -1,10 +1,14 @@
+import { PaymentMethod } from './PaymentMethod';
+import { Profile } from './Profile';
+
 export interface User {
-    id?: string;
+    id?: number;
     name: string;
     email: string;
-    accessToken?: string;
     password?: string;
-    address?: string;
-    number?: number;
-    complement?: string
+    address: string;
+    number: number;
+    complement?: string;
+    mainPaymentMethod: PaymentMethod;
+    profile?: Profile;
 }

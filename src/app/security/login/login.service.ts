@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User } from 'src/app/models/User';
+import { Token } from 'src/app/models/Token';
 import { HttpClient } from '@angular/common/http';
 import { Router, NavigationEnd } from '@angular/router';
 
@@ -13,7 +13,7 @@ import { BASE_URL } from "../../app.api";
 })
 export class LoginService {
 
-  user: User;
+  token: Token;
   lastUrl: string;
 
   constructor(private http: HttpClient, private router: Router) {
@@ -22,13 +22,13 @@ export class LoginService {
    }
 
   isUserLoggedIn(): boolean {
-      return this.user !== undefined;
+      return this.token !== undefined;
   }
 
-  login(email: string, password: string): Observable<User> {
-      return this.http.post<User>(`${BASE_URL}/auth`,
+  login(email: string, password: string): Observable<Token> {
+      return this.http.post<Token>(`${BASE_URL}/auth`,
                           {email: email, password: password})
-                      .pipe(tap(user => this.user = user));
+                      .pipe(tap(token => this.token = token));
   }
 
   handleLogin(path: string = this.lastUrl) {
@@ -36,10 +36,10 @@ export class LoginService {
   }
 
   logout() {
-      this.user = undefined;
+      this.token = undefined;
   }
 
-  updateLoginUser(user: User) {
-      this.user = user;
+  updateLoginUser(token: Token) {
+      this.token = token;
   }
 }
