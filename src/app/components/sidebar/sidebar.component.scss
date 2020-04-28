@@ -23,7 +23,8 @@
 }
 
 .sidebar-slide-in {
-  width: 80%;
+  width: 280px;
+  max-width: 80%;
 }
 
 .backdrop {
@@ -37,7 +38,7 @@
     .sidebarIcon {
       margin-left: 50px;
     }
-    .sidebar {
-      width: 350px;
-    }
+    // .sidebar {
+    //   width: 280px;
+    // }
   }

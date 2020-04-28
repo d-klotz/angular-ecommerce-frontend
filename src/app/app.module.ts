@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -24,6 +24,7 @@ import { ChipComponent } from './components/chip/chip.component';
 import { CardComponent } from './components/card/card.component';
 import { PricePipe } from './pipes/price.pipe';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { AuthInterceptor } from "./security/auth.interceptor";
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     FontAwesomeModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

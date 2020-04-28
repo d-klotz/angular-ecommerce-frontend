@@ -1,7 +1,7 @@
 export enum Category {
-  MACBOOKS = 'Macbooks',
-  IMACS = 'iMacs',
-  IPADS = 'iPads',
-  IPHONES = 'iPhones',
-  ACCESSORIES = 'Accessories'
+  MACBOOKS = 'MACBOOKS',
+  IMACS = 'IMACS',
+  IPADS = 'IPADS',
+  IPHONES = 'IPHONES',
+  ACCESSORIES = 'ACCESSORIES'
 }

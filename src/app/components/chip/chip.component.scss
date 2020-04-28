@@ -1,19 +1,12 @@
-// .chip {
-//   background-color: white;
-//   border-radius: 10px;
-//   color: #f88a30;
-//   font-weight: 600;
-//   height: 20px;
-//   padding: 10px;
-// }
-
 .menu-item {
   background-color: white;
   border-radius: 10px;
   color: #f88a30;
   font-weight: 600;
-  height: 20px;
+  height: 16px;
   padding: 10px;
+  font-size: 12px;
+  cursor: pointer;
 }
 
 .product-price {
@@ -33,3 +26,13 @@
   height: 15px;
   padding: 5px 10px 10px;
 }
+
+
+@media only screen
+  and (min-device-width: 736px)
+  and (max-device-width: 2000px){
+    .menu-item {
+      font-size: 16px;
+      height: 20px;
+    }
+  }

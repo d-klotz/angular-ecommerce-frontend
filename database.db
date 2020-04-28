@@ -3,31 +3,36 @@
 	"name": "Apple MacBook Air (2020) 13.3' with Touch ID",
 	"description": "Apple MacBook Air (2020) 13.3' with Touch ID - Space Grey (Intel Core i3 1.1GHz/256GB SSD/8GB RAM)",
 	"mainImage":"https://multimedia.bbycastatic.ca/multimedia/products/250x250/145/14517/14517652.jpg",
-	"price": 1299.99
+	"price": 1299.99,
+  "category": "MACBOOKS"
 }
 {
 	"name": "Apple MacBook Pro w/ Touch Bar 13.3",
 	"description": "Apple MacBook Pro w/ Touch Bar 13.3' - Space Grey (Intel Core i5 1.4GHz/128GB SSD/8GB RAM) ",
 	"mainImage":"https://multimedia.bbycastatic.ca/multimedia/products/250x250/137/13792/13792725.jpg",
-	"price": 1699.99
+	"price": 1699.99,
+  "category": "MACBOOKS"
 }
 {
 	"name": "Apple MacBook Air (2020) 13.3' with Touch ID",
 	"description": "Apple MacBook Air (2020) 13.3' w/ Touch ID - Space Grey (Intel Core i5 1.1GHz/512GB SSD/8GB RAM)",
 	"mainImage":"https://multimedia.bbycastatic.ca/multimedia/products/250x250/145/14517/14517656.jpg",
-	"price": 1699.99
+	"price": 1699.99,
+  "category": "MACBOOKS"
 }
 {
 	"name": "Apple MacBook Pro w/ Touch Bar 16",
 	"description": "Apple MacBook Pro w/ Touch Bar 16' - Space Grey (Intel Core i7 2.6GHz/512GB SSD/16GB RAM)",
 	"mainImage":"https://multimedia.bbycastatic.ca/multimedia/products/250x250/143/14335/14335048.jpg",
-	"price": 2999.99
+	"price": 2999.99,
+  "category": "MACBOOKS"
 }
 {
 	"name": "Apple MacBook Air 13.3' MD760LL/A 6 2013",
 	"description": "Apple MacBook Air 13.3' MD760LL/A (Intel Core i5 Dual-Core 1.3GHz / 128GB SSD / 4GB RAM) - Certified Refurbished",
 	"mainImage":"https://multimedia.bbycastatic.ca/multimedia/products/250x250/132/13231/13231441.jpg",
-	"price": 789.99
+	"price": 789.99,
+  "category": "MACBOOKS"
 }
 
 //---------------------------

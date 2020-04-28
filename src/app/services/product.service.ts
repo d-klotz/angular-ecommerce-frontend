@@ -13,7 +13,6 @@ export class ProductService {
   constructor(private http: HttpClient) { }
 
   getProducstByCategory(selectedCategory: Category): Observable<Product[]> {
-    let params: HttpParams = new HttpParams().append('category', selectedCategory);
-    return this.http.get<Product[]>(`${BASE_URL}/api/product`, { params });
+    return this.http.get<Product[]>(`${BASE_URL}/api/product/category/${selectedCategory}`);
   }
 }
