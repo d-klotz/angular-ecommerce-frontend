@@ -1,2 +1,11 @@
-<fa-icon [icon]="faBars" class="sidebarIcon"></fa-icon>
-
+<div>
+  <fa-icon [icon]="faBars" class="sidebarIcon" (click)="handleOnIconClick()"></fa-icon>
+  <div class="sidebar" [ngClass]="{'sidebar-slide-in': isOpen}">
+    <div>Customer</div>
+    <div>Orders</div>
+    <div>About</div>
+  </div>
+  <div [ngClass]="{'backdrop': isOpen}">
+    <ng-content></ng-content>
+  </div>
+</div>

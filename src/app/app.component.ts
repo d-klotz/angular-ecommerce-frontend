@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ecommerce-frontend';
+  isOpen: boolean = false;
+
+  closeSidebar() {
+    this.isOpen = false;
+  }
+
+  openSidebar() {
+    this.isOpen = true;
+  }
+
 }

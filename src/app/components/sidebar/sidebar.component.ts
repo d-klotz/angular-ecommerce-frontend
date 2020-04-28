@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -8,10 +8,15 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 })
 export class SidebarComponent implements OnInit {
   faBars = faBars;
-  isOpen: boolean = false;
+  @Output() onIconClick: EventEmitter<any> = new EventEmitter<any>();
+  @Input() isOpen: boolean;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  handleOnIconClick() {
+    this.onIconClick.emit();
   }
 }

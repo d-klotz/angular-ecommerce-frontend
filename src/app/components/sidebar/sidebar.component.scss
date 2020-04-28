@@ -1,7 +1,43 @@
 .sidebarIcon {
   font-size: 20px;
   color: white;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 15px;
+}
+
+.sidebar {
+  height: 100vh;
+  background-color: white;
+  width: 0;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition:         width 0.2s ease-in-out;
+  -moz-transition:    width 0.2s ease-in-out;
+  -ms-transition:     width 0.2s ease-in-out;
+  -o-transition:      width 0.2s ease-in-out;
+  -webkit-transition: width 0.2s ease-in-out;
+}
+
+.sidebar-slide-in {
+  width: 80%;
+}
+
+.backdrop {
+  opacity: 0.1;
 }
 
 
-
+@media only screen
+  and (min-device-width: 736px)
+  and (max-device-width: 2000px){
+    .sidebarIcon {
+      margin-left: 50px;
+    }
+    .sidebar {
+      width: 350px;
+    }
+  }

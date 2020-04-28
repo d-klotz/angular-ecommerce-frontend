@@ -23,6 +23,7 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { ChipComponent } from './components/chip/chip.component';
 import { CardComponent } from './components/card/card.component';
 import { PricePipe } from './pipes/price.pipe';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { PricePipe } from './pipes/price.pipe';
     ChipComponent,
     CardComponent,
     PricePipe,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
