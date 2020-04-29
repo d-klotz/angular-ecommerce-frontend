@@ -1,16 +1,16 @@
 .cart-button {
-  background-color: #6548eb;
-  color: white;
-  height: 35px;
-  padding: 10px;
+  color: #6548eb;
+  background-color: white;
+  height: 40px;
+  width: 100px;
   border-radius: 5px;
-  border: none;
+  border: solid #6548eb;
   text-align: center;
+  font-weight: 600;
 }
 
 .cart-button:hover,
 .cart-button:focus {
-  background-color: #472eb6;
   outline: none;
 }
 

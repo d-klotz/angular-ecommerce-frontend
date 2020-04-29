@@ -1,6 +1,6 @@
 .sidebarIcon {
   font-size: 20px;
-  color: white;
+  color: var(--secondary-color);
   position: absolute;
   margin-top: 30px;
   margin-left: 15px;
@@ -8,7 +8,7 @@
 
 .sidebar {
   height: 100vh;
-  background-color: white;
+  background-color: var(--secondary-color);
   width: 0;
   position: absolute;
   z-index: 1;
@@ -38,7 +38,4 @@
     .sidebarIcon {
       margin-left: 50px;
     }
-    // .sidebar {
-    //   width: 280px;
-    // }
   }

@@ -1,1 +1,13 @@
-<p>details works!</p>
+<div class="container">
+  <div class="product">
+    <img [src]="product.mainImage"/>
+    <div class="text">
+      <div class="name">{{product.name}}</div>
+      <div class="description">{{product.description}}</div>
+    </div>
+  </div>
+  <div class="checkout">
+    <div class="price">{{product.price | price}}</div>
+    <app-cart-button></app-cart-button>
+  </div>
+</div>

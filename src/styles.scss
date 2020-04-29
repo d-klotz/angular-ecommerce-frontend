@@ -3,12 +3,12 @@
 
 :root {
   --primary-color: #fff;
-  --background-color: #f88a30;
+  --secondary-color: #f88a30;
   --text-color: #2d2d2d;
 }
 
 body {
-  background-color: var(--background-color);
+  background-color: var(--primary-color);
   color: var(--text-color);
   font-family: Lato;
   padding: 0;

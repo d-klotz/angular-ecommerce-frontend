@@ -22,8 +22,7 @@ export class LoginService {
    }
 
   isUserLoggedIn(): boolean {
-      // return this.token !== undefined;
-      return true;
+    return this.token !== undefined;
   }
 
   login(email: string, password: string): Observable<Token> {
