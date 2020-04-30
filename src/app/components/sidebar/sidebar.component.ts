@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { LoginService } from 'src/app/security/login/login.service';
+import { ObservableService } from 'src/app/services/observable.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -8,15 +10,31 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 })
 export class SidebarComponent implements OnInit {
   faBars = faBars;
-  @Output() onIconClick: EventEmitter<any> = new EventEmitter<any>();
-  @Input() isOpen: boolean;
+  isOpen: boolean;
 
-  constructor() { }
+  constructor(
+    private loginService: LoginService,
+    private observableService: ObservableService) { }
 
   ngOnInit(): void {
+    this.observableService.isSidebarOpenChanged$.subscribe(status => {
+      this.isOpen = status;
+    })
   }
 
   handleOnIconClick() {
-    this.onIconClick.emit();
+    this.observableService.handleSidebarOpenClose(true);
+  }
+
+  isUserLoggedIn() {
+    return this.loginService.isUserLoggedIn();
+  }
+
+  getUserName() {
+    return this.loginService.user.name;
+  }
+
+  handleOnMenuItemClick() {
+    this.observableService.handleSidebarOpenClose(false);
   }
 }

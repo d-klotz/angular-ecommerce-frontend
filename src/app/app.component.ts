@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ObservableService } from './services/observable.service';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ecommerce-frontend';
-  isOpen: boolean = false;
+
+  constructor(private observableService: ObservableService) { }
 
   closeSidebar() {
-    this.isOpen = false;
-  }
-
-  openSidebar() {
-    this.isOpen = true;
+    this.observableService.handleSidebarOpenClose(false);
   }
 
 }

@@ -39,3 +39,21 @@
       margin-left: 50px;
     }
   }
+
+  .menu-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px;
+  }
+
+  .menu-items a{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px;
+    color: white;
+  }
+
+  .menu-items a:hover{
+    cursor: pointer;
+  }

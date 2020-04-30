@@ -7,6 +7,7 @@ import { Observable } from "rxjs";
 import { tap, filter } from "rxjs/operators";
 
 import { BASE_URL } from "../../app.api";
+import { User } from 'src/app/models/User';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,7 @@ import { BASE_URL } from "../../app.api";
 export class LoginService {
 
   token: Token;
+  user: User;
   lastUrl: string;
 
   constructor(private http: HttpClient, private router: Router) {
