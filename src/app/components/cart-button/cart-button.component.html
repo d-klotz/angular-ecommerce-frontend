@@ -1,1 +1,8 @@
-<button type="button" class="cart-button">Add to Cart</button>
+<button type="button" class="cart-button" [ngClass]="modifier">
+  <div *ngIf="modifier === 'small'">
+    <fa-icon [icon]="faShoppingBag" class="bag"></fa-icon>
+  </div>
+  <div *ngIf="modifier !== 'small'">
+    Add to Cart
+  </div>
+</button>

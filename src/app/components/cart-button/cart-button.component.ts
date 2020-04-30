@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-cart-button',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart-button.component.scss']
 })
 export class CartButtonComponent implements OnInit {
+  @Input() modifier?: string;
+
+  faShoppingBag = faShoppingBag;
 
   constructor() { }
 

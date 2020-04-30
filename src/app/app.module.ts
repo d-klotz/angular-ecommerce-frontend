@@ -46,7 +46,7 @@ import { AuthInterceptor } from "./security/auth.interceptor";
     ChipComponent,
     CardComponent,
     PricePipe,
-    SidebarComponent
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,

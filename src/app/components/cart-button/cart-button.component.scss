@@ -17,3 +17,24 @@
 .cart-button:active {
   transform: scale(0.99);
 }
+
+.small {
+  height: 30px;
+  width: 55px;
+  font-size: 12px;
+  border: solid var(--secondary-color);
+}
+
+.bag {
+  font-size: 15px;
+  color: var(--secondary-color);
+}
+
+
+@media only screen
+  and (min-device-width: 736px)
+  and (max-device-width: 2000px){
+    .bag {
+      font-size: 18px;
+    }
+  }

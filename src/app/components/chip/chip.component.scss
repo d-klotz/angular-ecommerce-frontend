@@ -14,8 +14,10 @@
   border-radius: 7px;
   color: #ffffff;
   font-weight: 500;
-  height: 15px;
-  padding: 5px 10px 10px;
+  height: 10px;
+  width: 45px;
+  padding: 5px 10px 10px 5px;
+  font-size: 12px;
 }
 
 .sale {
@@ -25,6 +27,10 @@
   font-weight: 400;
   height: 15px;
   padding: 5px 10px 10px;
+}
+
+.border {
+  border-color: green;
 }
 
 

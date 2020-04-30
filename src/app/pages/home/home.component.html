@@ -8,14 +8,10 @@
         <div id="description">{{product.description}}</div>
         <div id="price">
           <chip
-            *ngIf="product.price < 800"
-            value="SALE"
-            modifier="sale"
-          ></chip>
-          <chip
             [value]=product.price|price
             modifier="product-price"
           ></chip>
+          <app-cart-button modifier="small"></app-cart-button>
         </div>
       </div>
     </card>
