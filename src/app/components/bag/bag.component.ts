@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
+import { ObservableService } from 'src/app/services/observable.service';
+import { Product } from 'src/app/models/Product';
 
 @Component({
   selector: 'bag-icon',
@@ -8,10 +10,14 @@ import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 })
 export class BagComponent implements OnInit {
   faShoppingBag = faShoppingBag;
+  bagProducts: Product[] = [];
 
-  constructor() { }
+  constructor(private observableService: ObservableService) { }
 
   ngOnInit(): void {
+    this.observableService.productToCartChanged$.subscribe(product => {
+      this.bagProducts.push(product);
+    })
   }
 
 }

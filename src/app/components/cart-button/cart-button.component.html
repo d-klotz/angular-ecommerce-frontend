@@ -1,4 +1,4 @@
-<button type="button" class="cart-button" [ngClass]="modifier">
+<button type="button" class="cart-button" [ngClass]="modifier"(click)="addToCart()">
   <div *ngIf="modifier === 'small'">
     <fa-icon [icon]="faShoppingBag" class="bag"></fa-icon>
   </div>
