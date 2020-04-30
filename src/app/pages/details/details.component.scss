@@ -16,7 +16,7 @@ img {
 }
 
 .text {
-  margin: 0 10px 10px 10px;
+  margin: 10px 10px 10px 10px;
 }
 
 .name {
@@ -35,11 +35,43 @@ img {
  display: flex;
  flex-direction: row;
  margin-top: 20px;
- justify-content: space-evenly;
+ justify-content: space-around;
  align-items: center;
+ width: 100%;
 }
 
 .price {
   color: var(--secondary-color);
   font-weight: 600;
 }
+
+@media only screen
+  and (min-device-width: 400px)
+  and (max-device-width: 736px){
+    .price {
+      font-size: 20px;
+    }
+  }
+
+@media only screen
+  and (min-device-width: 736px)
+  and (max-device-width: 2000px){
+    .product {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+    .checkout {
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      margin: 10px;
+      width: 30%;
+    }
+    .price {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+    .text {
+      max-width: 80vw;
+    }
+  }
