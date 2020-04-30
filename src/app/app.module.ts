@@ -25,6 +25,8 @@ import { CardComponent } from './components/card/card.component';
 import { PricePipe } from './pipes/price.pipe';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { AuthInterceptor } from "./security/auth.interceptor";
+import { LogoComponent } from './components/logo/logo.component';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,8 @@ import { AuthInterceptor } from "./security/auth.interceptor";
     CardComponent,
     PricePipe,
     SidebarComponent,
+    LogoComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,7 @@ import { NewAccountComponent } from './pages/new-account/new-account.component';
 import { AccountComponent } from './pages/account/account.component';
 import { OrdersComponent } from './pages/orders/orders.component';
 import { OrderDetailComponent } from './pages/order-detail/order-detail.component';
+import { AboutComponent } from './pages/about/about.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'account', component: AccountComponent },
   { path: 'orders', component: OrdersComponent },
   { path: 'orders/:id', component: OrderDetailComponent },
+  { path: 'about', component: AboutComponent },
 ];
 
 @NgModule({

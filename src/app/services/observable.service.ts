@@ -11,7 +11,7 @@ export class ObservableService {
   private categorySubject$ = new BehaviorSubject<Category>(this.category);
   categoryChanged$ = this.categorySubject$.asObservable();
 
-  private product: Product;
+  private product: Product = undefined;
   private productToCartSubject$ = new BehaviorSubject<Product>(this.product);
   productToCartChanged$ = this.productToCartSubject$.asObservable();
 

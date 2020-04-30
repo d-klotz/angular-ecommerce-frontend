@@ -7,7 +7,6 @@ import { ObservableService } from './services/observable.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ecommerce-frontend';
 
   constructor(private observableService: ObservableService) { }
 
