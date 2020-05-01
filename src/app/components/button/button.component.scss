@@ -1,0 +1,33 @@
+.primary {
+  color: #6548eb;
+  border: solid #6548eb;
+  background-color: white;
+  height: 40px;
+  width: 100px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.primary:hover {
+  cursor: pointer;
+}
+
+.link {
+  border: none;
+  color: grey;
+  background-color: transparent;
+  font-size: 18px;
+}
+
+.link:hover {
+  border-bottom: solid grey 1px;
+  cursor: pointer;
+}
+
+.disabled {
+  background-color: #cccc;
+  color: grey;
+  border-color: grey;
+}

@@ -6,8 +6,8 @@ import { Router, NavigationEnd } from '@angular/router';
 import { Observable } from "rxjs";
 import { tap, filter } from "rxjs/operators";
 
-import { BASE_URL } from "../../app.api";
 import { User } from 'src/app/models/User';
+import { BASE_URL } from '../app.api';
 
 @Injectable({
   providedIn: 'root'
@@ -24,13 +24,13 @@ export class LoginService {
    }
 
   isUserLoggedIn(): boolean {
-    return this.token !== undefined;
+    return this.user !== undefined;
   }
 
-  login(email: string, password: string): Observable<Token> {
-      return this.http.post<Token>(`${BASE_URL}/auth`,
+  login(email: string, password: string): Observable<User> {
+      return this.http.post<User>(`${BASE_URL}/auth`,
                           {email: email, password: password})
-                      .pipe(tap(token => this.token = token));
+                      .pipe(tap(user => this.user = user));
   }
 
   handleLogin(path: string = this.lastUrl) {
@@ -38,10 +38,10 @@ export class LoginService {
   }
 
   logout() {
-      this.token = undefined;
+      this.user = undefined;
   }
 
-  updateLoginUser(token: Token) {
-      this.token = token;
+  updateLoginUser(user: User) {
+      this.user = user;
   }
 }

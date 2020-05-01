@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { BASE_URL } from '../app.api';
 import { Product } from '../models/Product';
 import { Observable } from 'rxjs';

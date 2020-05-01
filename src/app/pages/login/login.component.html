@@ -1,3 +1,33 @@
 <div class="container">
   <h1>Login</h1>
+    <form [formGroup]="loginForm" novalidate>
+      <span class="label">E-mail</span>
+      <input type="text" formControlName="email"/>
+      <span
+        class="error-text"
+        *ngIf="!loginForm.controls['email'].valid && !loginForm.controls['email'].pristine">
+        This e-mail is not valid!
+      </span>
+
+      <span class="label">Password</span>
+      <input type="password" formControlName="password"/>
+      <span
+        class="error-text"
+        *ngIf="!loginForm.controls['password'].valid  && !loginForm.controls['password'].pristine">
+        Password is required!
+      </span>
+      <div class="buttons">
+        <app-button modifier="link">Cancel</app-button>
+        <app-button
+          modifier="primary"
+          [disabled]="!loginForm.valid"
+          (onClick)="submit(loginForm)">Login</app-button>
+      </div>
+    </form>
+    <div>
+      Don't have an account yet?
+      <p>
+        <a [routerLink]="['/new-account']">Click here to create an account</a>
+      </p>
+    </div>
 </div>

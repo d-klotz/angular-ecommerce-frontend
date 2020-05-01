@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { LoginService } from 'src/app/security/login/login.service';
+import { LoginService } from 'src/app/services/login.service';
 import { ObservableService } from 'src/app/services/observable.service';
 
 @Component({
