@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { emailPattern } from 'src/app/utils/patterns';
 import { LoginService } from 'src/app/services/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
 
-  constructor(private loginService: LoginService) { }
+  constructor(private loginService: LoginService, private router: Router) { }
 
   ngOnInit(): void {
     this.loginForm = new FormGroup({
@@ -29,7 +30,9 @@ export class LoginComponent implements OnInit {
     console.log(loginForm);
     this.loginService.login(
       loginForm.controls['email'].value, loginForm.controls['password'].value)
-      .subscribe();
+      .subscribe(() => {
+        this.router.navigate(['/']);
+      });
   }
 
 }

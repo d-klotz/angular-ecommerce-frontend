@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Token } from 'src/app/models/Token';
 import { HttpClient } from '@angular/common/http';
 import { Router, NavigationEnd } from '@angular/router';
 
@@ -7,6 +6,7 @@ import { Observable } from "rxjs";
 import { tap, filter } from "rxjs/operators";
 
 import { User } from 'src/app/models/User';
+import { ApiResponse } from 'src/app/models/ApiResponse';
 import { BASE_URL } from '../app.api';
 
 @Injectable({
@@ -14,7 +14,6 @@ import { BASE_URL } from '../app.api';
 })
 export class LoginService {
 
-  token: Token;
   user: User;
   lastUrl: string;
 
@@ -27,10 +26,10 @@ export class LoginService {
     return this.user !== undefined;
   }
 
-  login(email: string, password: string): Observable<User> {
-      return this.http.post<User>(`${BASE_URL}/auth`,
+  login(email: string, password: string): Observable<ApiResponse<User>> {
+      return this.http.post<ApiResponse<User>>(`${BASE_URL}/auth`,
                           {email: email, password: password})
-                      .pipe(tap(user => this.user = user));
+                      .pipe(tap(res => this.user = res.data));
   }
 
   handleLogin(path: string = this.lastUrl) {

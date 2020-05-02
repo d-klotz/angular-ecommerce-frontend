@@ -4,7 +4,7 @@
     <app-logo></app-logo>
     <div class="menu-items" (click)="handleOnMenuItemClick()">
       <a *ngIf="!isUserLoggedIn()" [routerLink]="['/login']">Login</a>
-      <a *ngIf="isUserLoggedIn()">{{getUserName()}}</a>
+      <a *ngIf="isUserLoggedIn()" [routerLink]="['/account']">My Account</a>
       <a [routerLink]="['/orders']">Orders</a>
       <a [routerLink]="['/about']">About</a>
     </div>
