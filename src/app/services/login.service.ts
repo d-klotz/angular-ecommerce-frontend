@@ -8,6 +8,7 @@ import { tap, filter } from "rxjs/operators";
 import { User } from 'src/app/models/User';
 import { ApiResponse } from 'src/app/models/ApiResponse';
 import { BASE_URL } from '../app.api';
+import { Customer } from '../models/Customer';
 
 @Injectable({
   providedIn: 'root'
@@ -42,5 +43,9 @@ export class LoginService {
 
   updateLoginUser(user: User) {
       this.user = user;
+  }
+
+  createCustomer(customer: Customer): Observable<ApiResponse<Customer>> {
+    return this.http.post<ApiResponse<Customer>>(`${BASE_URL}/customer`, customer);
   }
 }

@@ -1,1 +1,67 @@
-<p>new-account works!</p>
+<div class="container">
+  <h1>Create an account</h1>
+    <form [formGroup]="newAccountForm" novalidate>
+      <span class="label">Name</span>
+      <input type="text" formControlName="name"/>
+      <span
+        class="error-text"
+        *ngIf="!newAccountForm.controls['name'].valid  && !newAccountForm.controls['name'].pristine">
+        Name is required!
+      </span>
+      <span class="label">Address</span>
+      <input type="text" formControlName="address"/>
+      <span
+        class="error-text"
+        *ngIf="!newAccountForm.controls['address'].valid  && !newAccountForm.controls['address'].pristine">
+        Address is required!
+      </span>
+      <span class="label">Number</span>
+      <input type="text" formControlName="number"/>
+      <span
+        class="error-text"
+        *ngIf="!newAccountForm.controls['number'].valid  && !newAccountForm.controls['number'].pristine">
+        Number is required!
+      </span>
+      <span class="label">Payment Method</span>
+      <select formControlName="paymentMethod">
+        <option [value]="method" *ngFor="let method of methods">
+          {{method}}
+        </option>
+      </select>
+      <span class="label">E-mail</span>
+      <input type="text" formControlName="email"/>
+      <span
+        class="error-text"
+        *ngIf="!newAccountForm.controls['email'].valid && !newAccountForm.controls['email'].pristine">
+        This e-mail is not valid!
+      </span>
+
+      <span class="label">Password</span>
+      <input type="password" formControlName="password"/>
+      <span
+        class="error-text"
+        *ngIf="!newAccountForm.controls['password'].valid && !newAccountForm.controls['password'].pristine">
+        Password is required!
+      </span>
+      <span class="label">Confirm password</span>
+      <input type="password" formControlName="confirmPassword"/>
+      <span
+        class="error-text"
+        *ngIf="newAccountForm.hasError('notSame') && !newAccountForm.controls['confirmPassword'].pristine">
+        Passwords do not match
+      </span>
+      <div class="buttons">
+        <app-button modifier="link">Cancel</app-button>
+        <app-button
+          modifier="primary"
+          [disabled]="!newAccountForm.valid"
+          (onClick)="submit(newAccountForm)">Submit</app-button>
+      </div>
+    </form>
+    <div>
+      Already have an account?
+      <p>
+        <a [routerLink]="['/login']">Click here to Login</a>
+      </p>
+    </div>
+</div>
