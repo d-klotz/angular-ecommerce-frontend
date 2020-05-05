@@ -46,6 +46,6 @@ export class LoginService {
   }
 
   createCustomer(customer: Customer): Observable<ApiResponse<Customer>> {
-    return this.http.post<ApiResponse<Customer>>(`${BASE_URL}/customer`, customer);
+    return this.http.post<ApiResponse<Customer>>(`${BASE_URL}/api/customer`, customer);
   }
 }

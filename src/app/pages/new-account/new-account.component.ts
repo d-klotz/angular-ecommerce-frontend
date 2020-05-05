@@ -70,10 +70,12 @@ checkPasswords(form: FormGroup) { // here we have the 'passwords' group
 
     this.loginService.createCustomer(customer)
       .subscribe(response => {
-        this.loginService.login(response.data.email, response.data.password)
-          .subscribe(() => {
-            this.router.navigate(['/']);
-          });
+        if(response.errors.length === 0) {
+          this.loginService.login(customer.email, customer.password)
+            .subscribe(() => {
+              this.router.navigate(['/']);
+            });
+        }
       });
   }
 }
