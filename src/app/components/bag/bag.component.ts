@@ -10,13 +10,17 @@ import { Product } from 'src/app/models/Product';
 })
 export class BagComponent implements OnInit {
   faShoppingBag = faShoppingBag;
-  bagProducts: Product[] = [];
+  bagProducts: any[] = [];
 
   constructor(private observableService: ObservableService) { }
 
   ngOnInit(): void {
+    this.bagProducts = localStorage.getItem('bagProducts') ? localStorage.getItem('bagProducts').split(",") : [];
     this.observableService.productToCartChanged$.subscribe(product => {
-      this.bagProducts.push(product);
+      if(product) {
+        this.bagProducts.push(product.id);
+        localStorage.setItem('bagItems', this.bagProducts.toString())
+      }
     })
   }
 
