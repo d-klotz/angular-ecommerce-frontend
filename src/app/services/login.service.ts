@@ -15,8 +15,23 @@ import { Customer } from '../models/Customer';
 })
 export class LoginService {
 
-  user: User;
+  private _user: User;
   lastUrl: string;
+
+  get user(): User {
+    const user: User = {
+      email: localStorage.getItem('userEmail'),
+      token: localStorage.getItem('userToken')
+    }
+    this._user = user;
+    return user;
+  }
+
+  set user(user) {
+    localStorage.setItem('userEmail', user.email),
+    localStorage.setItem('userToken', user.token),
+    this._user = user;
+  }
 
   constructor(private http: HttpClient, private router: Router) {
       this.router.events.pipe(filter(e => e instanceof NavigationEnd))
@@ -47,5 +62,9 @@ export class LoginService {
 
   createCustomer(customer: Customer): Observable<ApiResponse<Customer>> {
     return this.http.post<ApiResponse<Customer>>(`${BASE_URL}/api/customer`, customer);
+  }
+
+  getUserByToken(): Observable<ApiResponse<Customer>> {
+    return this.http.get<ApiResponse<Customer>>(`${BASE_URL}/api/customer`);
   }
 }

@@ -28,6 +28,7 @@ import { AuthInterceptor } from "./security/auth.interceptor";
 import { LogoComponent } from './components/logo/logo.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ButtonComponent } from './components/button/button.component';
+import { PaymentMethodPipe } from './pipes/payment-method.pipe';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { ButtonComponent } from './components/button/button.component';
     LogoComponent,
     AboutComponent,
     ButtonComponent,
+    PaymentMethodPipe,
   ],
   imports: [
     BrowserModule,

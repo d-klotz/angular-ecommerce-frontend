@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+  font-size: 18px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.text-group {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.text-group span:first-child {
+  font-weight: 600;
+  color: black;
+}
+
+span {
+  color: grey;
+  padding-right: 10px;
+}
+
+.button-group {
+  width: 20%;
+  min-width: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
