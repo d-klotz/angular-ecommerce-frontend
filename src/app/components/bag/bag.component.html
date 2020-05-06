@@ -1,2 +1,2 @@
 <div *ngIf="bagProducts.length > 0">{{bagProducts.length}}</div>
-<fa-icon [icon]="faShoppingBag" class="bag"></fa-icon>
+<fa-icon [icon]="faShoppingBag" class="bag" (click)="navigateToCheckout()"></fa-icon>

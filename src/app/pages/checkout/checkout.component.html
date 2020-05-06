@@ -1,1 +1,17 @@
-<p>checkout works!</p>
+<div class="container">
+  <h1>Checkout</h1>
+  <div *ngFor="let product of selectedProducts">
+    <div class="order-card">
+      <img
+        src={{product.mainImage}}/>
+        <div id="name">{{product.name}}</div>
+        <div>{{product.quantity}}</div>
+        <div id="price">
+          <chip
+            [value]=product.price|price
+            modifier="product-price"
+          ></chip>
+        </div>
+    </div>
+  </div>
+</div>

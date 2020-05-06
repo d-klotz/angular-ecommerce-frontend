@@ -18,7 +18,7 @@ export class DetailsComponent implements OnInit {
     private sanitizer: DomSanitizer ) { }
 
   ngOnInit(): void {
-    this.productService.getProducstById(this.route.snapshot.params['id'])
+    this.productService.getProductById(this.route.snapshot.params['id'])
       .subscribe(product => this.product = product);
   }
 

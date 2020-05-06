@@ -39,7 +39,8 @@ export class LoginService {
    }
 
   isUserLoggedIn(): boolean {
-    return this.user !== undefined;
+    console.log(this.user)
+    return this.user.email !== null || this.user.token !== null;
   }
 
   login(email: string, password: string): Observable<ApiResponse<User>> {
