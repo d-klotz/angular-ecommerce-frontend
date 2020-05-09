@@ -39,7 +39,6 @@ export class LoginService {
    }
 
   isUserLoggedIn(): boolean {
-    console.log(this.user)
     return this.user.email !== null || this.user.token !== null;
   }
 

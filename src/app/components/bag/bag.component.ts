@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import { ObservableService } from 'src/app/services/observable.service';
-import { Product } from 'src/app/models/Product';
 import { Router } from '@angular/router';
 
 @Component({
@@ -17,6 +16,7 @@ export class BagComponent implements OnInit {
     private observableService: ObservableService,
     private router: Router) { }
 
+    //todo: remove localstorage set and get from here and place it inside observable service
   ngOnInit(): void {
     this.bagProducts = localStorage.getItem('bagProducts') ? localStorage.getItem('bagProducts').split(",") : [];
     this.observableService.productToCartChanged$.subscribe(product => {

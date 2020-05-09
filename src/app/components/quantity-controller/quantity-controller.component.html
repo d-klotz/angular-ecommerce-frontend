@@ -1,0 +1,12 @@
+<div>
+  <fa-icon
+    (click)="onDecreaseClick($event)"
+    [ngClass]="{'trash-icon': showTrashIcon}"
+    [icon]="showTrashIcon ? faTrash : innerWidth > 582 ? faCaretDown : faCaretLeft">
+  </fa-icon>
+  <ng-content></ng-content>
+  <fa-icon
+    (click)="onIncreaseClick($event)"
+    [icon]="innerWidth > 582 ? faCaretUp : faCaretRight">
+</fa-icon>
+</div>

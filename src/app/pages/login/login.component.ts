@@ -27,7 +27,6 @@ export class LoginComponent implements OnInit {
   }
 
   submit(loginForm: FormGroup) {
-    console.log(loginForm);
     this.loginService.login(
       loginForm.controls['email'].value, loginForm.controls['password'].value)
       .subscribe(() => {

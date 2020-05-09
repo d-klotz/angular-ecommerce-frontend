@@ -24,7 +24,6 @@ export class HomeComponent implements OnInit {
       if(this.router.url !== '/') {
         this.router.navigateByUrl('/');
       }
-      console.log(this.router.url);
       this.productService.getProducstByCategory(category)
     .subscribe(products => this.products = products);
     })

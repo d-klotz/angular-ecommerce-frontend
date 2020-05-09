@@ -1,0 +1,26 @@
+div {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+fa-icon {
+  color: #6548eb;
+  font-size: 30px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.trash-icon {
+  font-size: 18px;
+  color: #ff4c4c;
+}
+
+@media only screen
+  and (min-device-width: 200px)
+  and (max-device-width: 582px){
+    div {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
