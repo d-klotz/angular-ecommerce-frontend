@@ -16,15 +16,10 @@ export class BagComponent implements OnInit {
     private observableService: ObservableService,
     private router: Router) { }
 
-    //todo: remove localstorage set and get from here and place it inside observable service
   ngOnInit(): void {
-    this.bagProducts = localStorage.getItem('bagProducts') ? localStorage.getItem('bagProducts').split(",") : [];
-    this.observableService.productToCartChanged$.subscribe(product => {
-      if(product) {
-        this.bagProducts.push(product.id);
-        localStorage.setItem('bagProducts', this.bagProducts.toString())
-      }
-    })
+    this.observableService.CartProductsChanged$.subscribe(products => {
+      this.bagProducts = products;
+    });
   }
 
   navigateToCheckout() {

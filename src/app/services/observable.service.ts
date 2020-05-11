@@ -12,8 +12,11 @@ export class ObservableService {
   categoryChanged$ = this.categorySubject$.asObservable();
 
   private product: Product = undefined;
+  private cartProductsIds: string[] = localStorage.getItem('bagProducts') ? localStorage.getItem('bagProducts').split(",") : [];
   private productToCartSubject$ = new BehaviorSubject<Product>(this.product);
   productToCartChanged$ = this.productToCartSubject$.asObservable();
+  private CartProductsSubject$ = new BehaviorSubject<string[]>(this.cartProductsIds);
+  CartProductsChanged$ = this.CartProductsSubject$.asObservable();
 
   private isSidebarOpen: boolean = false;
   private isSidebarOpenSubject$ = new BehaviorSubject<boolean>(this.isSidebarOpen);
@@ -27,8 +30,21 @@ export class ObservableService {
   }
 
   public addProductToCart(product: Product) {
+    if(product) {
+      this.cartProductsIds.push(product.id.toString());
+      localStorage.setItem('bagProducts', this.cartProductsIds.toString())
+    }
     this.product = product;
-    this.productToCartSubject$.next(product);
+    this.CartProductsSubject$.next(this.cartProductsIds)
+  }
+
+  public removeProductFromCart(product: Product) {
+    if(product) {
+      const index = this.cartProductsIds.findIndex(id => id === product.id.toString());
+      this.cartProductsIds.splice(index, 1);
+      localStorage.setItem('bagProducts', this.cartProductsIds.toString())
+    }
+    this.CartProductsSubject$.next(this.cartProductsIds)
   }
 
   public handleSidebarOpenClose(status: boolean) {

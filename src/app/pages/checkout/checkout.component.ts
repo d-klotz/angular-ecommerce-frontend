@@ -18,17 +18,18 @@ export class CheckoutComponent implements OnInit {
     private observableService: ObservableService) { }
 
   ngOnInit(): void {
-    this.getSelectedProducts();
+    this.observableService.CartProductsChanged$.subscribe(productsIds => {
+      this.getSelectedProducts(productsIds);
+    });
   }
 
-  private getSelectedProducts() {
-    const productsIds = localStorage.getItem('bagProducts') ? localStorage.getItem('bagProducts').split(",") : [];
+  private getSelectedProducts(productsIds: any) {
     const productQuantityObj = {};
-    productsIds.forEach( productId => {
+    this.selectedProducts = [];
+
+    [...new Set<any>(productsIds)].forEach( productId => {
       productQuantityObj[productId] = this.checkQuantityByProductId(productId, productsIds);
-    });
-    [...new Set(productsIds)].forEach(id => {
-      this.productService.getProductById(Number(id))
+      this.productService.getProductById(Number(productId))
         .subscribe(product => {
           const selectedProduct: CheckoutProduct = {
             id: product.id,
@@ -48,18 +49,17 @@ export class CheckoutComponent implements OnInit {
   }
 
   onIncreaseClick(selectedProduct: CheckoutProduct) {
-    selectedProduct.quantity ++;
+    this.observableService.addProductToCart(selectedProduct);
   }
 
   // todo: implement confirmation modal and add/delete product from observable service
   onDecreaseClick(selectedProduct: CheckoutProduct) {
     if(selectedProduct.quantity > 1) {
-      selectedProduct.quantity --;
+      this.observableService.removeProductFromCart(selectedProduct);
     } else {
       const result = confirm('Are you sure you want to remove this product?');
       if(result) {
-        const index = this.selectedProducts.findIndex(obj => obj.id === selectedProduct.id);
-        this.selectedProducts.splice(index, 1);
+        this.observableService.removeProductFromCart(selectedProduct);
       }
     }
   }
