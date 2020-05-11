@@ -6,15 +6,15 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./order-summary.component.scss']
 })
 export class OrderSummaryComponent implements OnInit {
-  @Output() onClick = new EventEmitter();
+  @Output() onButtonClick = new EventEmitter<any>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  clicked() {
-    this.onClick.emit();
+  clicked(event) {
+    this.onButtonClick.emit(event);
   }
 
 }

@@ -29,6 +29,12 @@ img {
   text-align: left;
   padding: 5px;
   margin: 5px;
+
+  a:hover {
+    cursor: pointer;
+    text-decoration-style: solid;
+    text-decoration-line: underline;
+  }
 }
 
 .price {

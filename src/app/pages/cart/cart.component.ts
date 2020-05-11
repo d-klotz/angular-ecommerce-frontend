@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CheckoutProduct } from 'src/app/models/CheckoutProduct';
 import { ProductService } from 'src/app/services/product.service';
 import { ObservableService } from 'src/app/services/observable.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -16,7 +17,8 @@ export class CartComponent implements OnInit {
 
   constructor(
     private productService: ProductService,
-    private observableService: ObservableService) { }
+    private observableService: ObservableService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.observableService.CartProductsChanged$.subscribe(productsIds => {
@@ -72,4 +74,12 @@ export class CartComponent implements OnInit {
       .reduce((prev, value) => prev + value, 0);
   }
 
+  goToProductDetail(productId: number) {
+    this.router.navigate([`details/${productId}`])
+  }
+
+  goToCheckout() {
+    console.log('test');
+    this.router.navigate(['checkout']);
+  }
 }

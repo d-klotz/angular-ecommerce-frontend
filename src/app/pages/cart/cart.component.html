@@ -4,7 +4,7 @@
     <div class="order-card">
       <img
         src={{product.mainImage}}/>
-      <div class="name">{{product.name}}</div>
+      <div class="name"><a (click)="goToProductDetail(product.id)">{{product.name}}</a></div>
       <div class="quantity">
         <app-quantity-controller
           (increaseClick)="onIncreaseClick(product)"
@@ -21,5 +21,5 @@
       </div>
     </div>
   </div>
-  <app-order-summary>{{getSummary() | currency: 'USD': 'symbol'}}</app-order-summary>
+  <app-order-summary (onButtonClick)="goToCheckout()">{{getSummary() | currency: 'USD': 'symbol'}}</app-order-summary>
 </div>
