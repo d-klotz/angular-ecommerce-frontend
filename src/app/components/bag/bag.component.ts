@@ -23,7 +23,7 @@ export class BagComponent implements OnInit {
   }
 
   navigateToCheckout() {
-    this.router.navigate(['/checkout']);
+    this.router.navigate(['/cart']);
   }
 
 }

@@ -22,7 +22,6 @@ import { BagComponent } from './components/bag/bag.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { ChipComponent } from './components/chip/chip.component';
 import { CardComponent } from './components/card/card.component';
-import { PricePipe } from './pipes/price.pipe';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { AuthInterceptor } from "./security/auth.interceptor";
 import { LogoComponent } from './components/logo/logo.component';
@@ -30,6 +29,8 @@ import { AboutComponent } from './pages/about/about.component';
 import { ButtonComponent } from './components/button/button.component';
 import { PaymentMethodPipe } from './pipes/payment-method.pipe';
 import { QuantityControllerComponent } from './components/quantity-controller/quantity-controller.component';
+import { CartComponent } from './pages/cart/cart.component';
+import { OrderSummaryComponent } from './components/order-summary/order-summary.component';
 
 @NgModule({
   declarations: [
@@ -49,13 +50,14 @@ import { QuantityControllerComponent } from './components/quantity-controller/qu
     CategoriesComponent,
     ChipComponent,
     CardComponent,
-    PricePipe,
     SidebarComponent,
     LogoComponent,
     AboutComponent,
     ButtonComponent,
     PaymentMethodPipe,
     QuantityControllerComponent,
+    CartComponent,
+    OrderSummaryComponent,
   ],
   imports: [
     BrowserModule,

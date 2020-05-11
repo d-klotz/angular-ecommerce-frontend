@@ -9,12 +9,14 @@ import { AccountComponent } from './pages/account/account.component';
 import { OrdersComponent } from './pages/orders/orders.component';
 import { OrderDetailComponent } from './pages/order-detail/order-detail.component';
 import { AboutComponent } from './pages/about/about.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'details/:id', component: DetailsComponent },
   { path: 'checkout', component: CheckoutComponent },
+  { path: 'cart', component: CartComponent },
   { path: 'login', component: LoginComponent },
   { path: 'new-account', component: NewAccountComponent },
   { path: 'account', component: AccountComponent },

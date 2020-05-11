@@ -1,10 +1,10 @@
 .cart-button {
-  color: #6548eb;
-  background-color: white;
+  background-color: #6548eb;
+  color: white;
+  border: solid #6548eb;
   height: 40px;
   width: 100px;
   border-radius: 5px;
-  border: solid #6548eb;
   text-align: center;
   font-weight: 600;
   cursor: pointer;
@@ -23,6 +23,7 @@
   height: 30px;
   width: 55px;
   font-size: 12px;
+  background-color: white;
   border: solid var(--secondary-color);
 }
 

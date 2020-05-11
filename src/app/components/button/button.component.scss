@@ -1,4 +1,16 @@
 .primary {
+  background-color: #6548eb;
+  color: white;
+  border: solid #6548eb;
+  min-height: 40px;
+  min-width: 100px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.primary-outlined {
   color: #6548eb;
   border: solid #6548eb;
   background-color: white;

@@ -6,7 +6,7 @@
       <div class="description">{{product.description}}</div>
     </div>
     <div class="checkout">
-      <div class="price">{{product.price | price}}</div>
+      <div class="price">{{product.price | currency: 'USD': 'symbol'}}</div>
       <app-cart-button></app-cart-button>
     </div>
   </div>

@@ -1,24 +1,3 @@
-<div class="container">
-  <h1>Checkout</h1>
-  <div *ngFor="let product of selectedProducts">
-    <div class="order-card">
-      <img
-        src={{product.mainImage}}/>
-      <div class="name">{{product.name}}</div>
-      <div class="quantity">
-        <app-quantity-controller
-          (increaseClick)="onIncreaseClick(product)"
-          (decreaseClick)="onDecreaseClick(product)"
-          [showTrashIcon]="product.quantity === 1">
-          {{product.quantity}}
-        </app-quantity-controller>
-      </div>
-      <div class="price">
-        <chip
-          [value]=product.price|price
-          modifier="product-price"
-        ></chip>
-      </div>
-    </div>
-  </div>
+<div>
+  test
 </div>

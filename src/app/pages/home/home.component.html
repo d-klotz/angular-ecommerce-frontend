@@ -10,7 +10,7 @@
         </div>
         <div id="price">
           <chip
-            [value]=product.price|price
+            [value]="product.price | currency: 'USD': 'symbol'"
             modifier="product-price"
           ></chip>
           <app-cart-button modifier="small" [selectedProduct]="product"></app-cart-button>
