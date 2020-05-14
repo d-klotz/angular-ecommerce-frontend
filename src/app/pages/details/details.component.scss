@@ -28,7 +28,7 @@ img {
 .description {
   font-size: 14px;
   font-weight: 400;
-  color: grey;
+  color: var(--color-five);
 }
 
 .checkout {
@@ -41,7 +41,7 @@ img {
 }
 
 .price {
-  color: var(--secondary-color);
+  color: var(--color-two);
   font-weight: 600;
 }
 

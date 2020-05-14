@@ -1,7 +1,7 @@
 .primary {
-  background-color: #6548eb;
-  color: white;
-  border: solid #6548eb;
+  background-color: var(--color-four);
+  color: var(--color-one);
+  border: solid var(--color-four);
   min-height: 40px;
   min-width: 100px;
   border-radius: 5px;
@@ -11,9 +11,9 @@
 }
 
 .primary-outlined {
-  color: #6548eb;
-  border: solid #6548eb;
-  background-color: white;
+  color: var(--color-four);
+  border: solid var(--color-four);
+  background-color: var(--color-one);
   min-height: 40px;
   min-width: 100px;
   border-radius: 5px;
@@ -28,18 +28,16 @@
 
 .link {
   border: none;
-  color: grey;
+  color: var(--color-five);
   background-color: transparent;
   font-size: 18px;
 }
 
 .link:hover {
-  border-bottom: solid grey 1px;
+  border-bottom: solid var(--color-five) 1px;
   cursor: pointer;
 }
 
 .disabled {
-  background-color: #cccc;
-  color: grey;
-  border-color: grey;
+  opacity: 0.5;
 }

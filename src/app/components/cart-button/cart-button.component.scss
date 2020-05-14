@@ -1,7 +1,7 @@
 .cart-button {
-  background-color: #6548eb;
-  color: white;
-  border: solid #6548eb;
+  background-color: var(--color-four);
+  color: var(--color-one);
+  border: solid var(--color-four);
   height: 40px;
   width: 100px;
   border-radius: 5px;
@@ -23,13 +23,13 @@
   height: 30px;
   width: 55px;
   font-size: 12px;
-  background-color: white;
-  border: solid var(--secondary-color);
+  background-color: var(--color-one);
+  border: solid var(--color-four);
 }
 
 .bag {
   font-size: 15px;
-  color: var(--secondary-color);
+  color: var(--color-four);
 }
 
 

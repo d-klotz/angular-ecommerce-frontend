@@ -1,7 +1,7 @@
 .menu-item {
-  background-color: var(--secondary-color);
+  background-color: var(--color-two);
   border-radius: 10px;
-  color: var(--primary-color);
+  color: var(--color-one);
   font-weight: 600;
   height: 16px;
   padding: 10px;
@@ -10,29 +10,15 @@
 }
 
 .product-price {
-  background-color: rgb(165, 164, 164);
+  background-color: var(--color-two);
   border-radius: 7px;
-  color: #ffffff;
+  color: var(--color-one);
   font-weight: 500;
   height: 10px;
   min-width: 45px;
   padding: 5px 10px 10px 5px;
   font-size: 12px;
 }
-
-.sale {
-  background-color: #f3cc5f;
-  border-radius: 7px;
-  color: #f88a30;
-  font-weight: 400;
-  height: 15px;
-  padding: 5px 10px 10px;
-}
-
-.border {
-  border-color: green;
-}
-
 
 @media only screen
   and (min-device-width: 736px)
