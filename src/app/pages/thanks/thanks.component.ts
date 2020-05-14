@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-thanks',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ThanksComponent implements OnInit {
 
-  constructor() { }
+  public faCheckCircle = faCheckCircle;
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+
+  public goToOrders() {
+    this.router.navigate(['/orders']);
+  }
+
+  public goToShopping() {
+    this.router.navigate(['/']);
   }
 
 }
