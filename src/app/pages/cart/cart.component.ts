@@ -3,6 +3,7 @@ import { CheckoutProduct } from 'src/app/models/CheckoutProduct';
 import { ProductService } from 'src/app/services/product.service';
 import { ObservableService } from 'src/app/services/observable.service';
 import { Router } from '@angular/router';
+import { OrderService } from 'src/app/services/order.service';
 
 @Component({
   selector: 'app-cart',
@@ -18,7 +19,8 @@ export class CartComponent implements OnInit {
   constructor(
     private productService: ProductService,
     private observableService: ObservableService,
-    private router: Router) { }
+    private router: Router,
+    private orderService: OrderService) { }
 
   ngOnInit(): void {
     this.observableService.CartProductsChanged$.subscribe(productsIds => {
@@ -47,6 +49,7 @@ export class CartComponent implements OnInit {
           selectedProducts.push(selectedProduct)
         });
     });
+    this.orderService.setProductsToCheckout(productQuantityObj);
     return selectedProducts;
   }
 
@@ -79,7 +82,6 @@ export class CartComponent implements OnInit {
   }
 
   goToCheckout() {
-    console.log('test');
     this.router.navigate(['checkout']);
   }
 }

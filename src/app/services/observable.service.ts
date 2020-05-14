@@ -47,6 +47,12 @@ export class ObservableService {
     this.CartProductsSubject$.next(this.cartProductsIds)
   }
 
+  public cleanCart() {
+    this.cartProductsIds = [];
+    localStorage.removeItem('bagProducts');
+    this.CartProductsSubject$.next(this.cartProductsIds)
+  }
+
   public handleSidebarOpenClose(status: boolean) {
     this.isSidebarOpen = status;
     this.isSidebarOpenSubject$.next(status);

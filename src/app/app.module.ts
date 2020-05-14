@@ -31,6 +31,7 @@ import { PaymentMethodPipe } from './pipes/payment-method.pipe';
 import { QuantityControllerComponent } from './components/quantity-controller/quantity-controller.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { OrderSummaryComponent } from './components/order-summary/order-summary.component';
+import { ThanksComponent } from './pages/thanks/thanks.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { OrderSummaryComponent } from './components/order-summary/order-summary.
     QuantityControllerComponent,
     CartComponent,
     OrderSummaryComponent,
+    ThanksComponent,
   ],
   imports: [
     BrowserModule,

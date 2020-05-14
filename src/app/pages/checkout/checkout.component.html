@@ -1,3 +1,52 @@
-<div>
-  test
+<div class="container">
+  <h1>Complete your order</h1>
+    <form [formGroup]="checkoutForm" novalidate>
+      <span class="label">Name</span>
+      <input type="text" formControlName="name"/>
+      <span
+        class="error-text"
+        *ngIf="!checkoutForm.controls['name'].valid  && !checkoutForm.controls['name'].pristine">
+        Name is required!
+      </span>
+      <span class="label">Delivery Address</span>
+      <input type="text" formControlName="address"/>
+      <span
+        class="error-text"
+        *ngIf="!checkoutForm.controls['address'].valid  && !checkoutForm.controls['address'].pristine">
+        Address is required!
+      </span>
+      <span class="label">Number</span>
+      <input type="text" formControlName="number"/>
+      <span
+        class="error-text"
+        *ngIf="!checkoutForm.controls['number'].valid  && !checkoutForm.controls['number'].pristine">
+        Number is required!
+      </span>
+      <span class="label">Payment Method</span>
+      <select formControlName="paymentMethod">
+        <option [value]="method" *ngFor="let method of paymentMethods">
+          {{method}}
+        </option>
+      </select>
+      <span class="label">Shipping Method</span>
+      <select formControlName="shippingMethod">
+        <option [value]="method" *ngFor="let method of shippingMethod">
+          {{method}}
+        </option>
+      </select>
+      <span class="label">E-mail</span>
+      <input type="text" formControlName="email"/>
+      <span
+        class="error-text"
+        *ngIf="!checkoutForm.controls['email'].valid && !checkoutForm.controls['email'].pristine">
+        This e-mail is not valid!
+      </span>
+      <div class="buttons">
+        <app-button modifier="link">Cancel</app-button>
+        <app-button
+          modifier="primary"
+          [disabled]="!checkoutForm.valid"
+          (onClick)="submit()">Finish order</app-button>
+      </div>
+    </form>
 </div>
