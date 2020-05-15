@@ -30,4 +30,8 @@ export class OrderService {
     });
     this._productQuantity = productQuantityList;
   }
+
+  public getOrdersByUser() {
+    return this.http.get<Order[]>(`${BASE_URL}/api/order`);
+  }
 }

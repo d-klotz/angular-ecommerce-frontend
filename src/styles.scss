@@ -7,12 +7,11 @@
   --color-three: #facfad;
   --color-four: #3e4e50;
   --color-five: #848c8e;
-  --text-color: #2d2d2d;
 }
 
 body {
   background-color: var(--color-three);
-  color: var(--text-color);
+  color: var(--color-four);
   font-family: Lato;
   padding: 0;
   margin: 0;

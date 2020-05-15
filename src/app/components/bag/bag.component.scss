@@ -1,10 +1,18 @@
+.container {
+  position: absolute;
+  display: block;
+  right: 15px;
+  margin-top: 20px;
+}
+
 .bag {
   font-size: 25px;
   color: var(--color-two);
   cursor: pointer;
+  z-index:0;
 }
 
-div {
+.quantity {
   position: absolute;
   font-size: 12px;
   color: var(--color-one);
@@ -13,17 +21,21 @@ div {
   width: 15px;
   height: 15px;
   text-align: center;
-  margin-top: 20px;
   margin-left: -5px;
+  z-index:10;
+  margin-top: 20px;
 }
 
 @media only screen
   and (min-device-width: 736px)
   and (max-device-width: 2000px){
+    .container {
+      right: 60px;
+    }
     .bag {
       font-size: 30px;
     }
-    div {
+    .quantity {
       font-size: 13px;
       width: 18px;
       height: 18px;

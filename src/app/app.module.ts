@@ -16,7 +16,6 @@ import { AccountComponent } from './pages/account/account.component';
 import { OrdersComponent } from './pages/orders/orders.component';
 import { OrderDetailComponent } from './pages/order-detail/order-detail.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
-import { HeaderComponent } from './components/header/header.component';
 import { CartButtonComponent } from './components/cart-button/cart-button.component';
 import { BagComponent } from './components/bag/bag.component';
 import { CategoriesComponent } from './components/categories/categories.component';
@@ -45,7 +44,6 @@ import { ThanksComponent } from './pages/thanks/thanks.component';
     OrdersComponent,
     OrderDetailComponent,
     SearchBarComponent,
-    HeaderComponent,
     CartButtonComponent,
     BagComponent,
     CategoriesComponent,

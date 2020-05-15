@@ -16,8 +16,11 @@
   font-weight: 500;
   height: 10px;
   min-width: 45px;
-  padding: 5px 10px 10px 5px;
+  padding: 7px;
   font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media only screen
@@ -26,5 +29,8 @@
     .menu-item {
       font-size: 16px;
       height: 20px;
+    }
+    .product-price {
+      font-size: 16px;
     }
   }

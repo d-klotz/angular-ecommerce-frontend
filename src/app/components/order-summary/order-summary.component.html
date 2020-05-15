@@ -1,7 +1,9 @@
 <div class="container">
   <div class="content">
     <span>Total</span>
-    <ng-content></ng-content>
+    <div class="total">
+      <ng-content></ng-content>
+    </div>
   </div>
   <app-button modifier="primary" (onClick)="clicked($event)">Proceed to Checkout</app-button>
 </div>

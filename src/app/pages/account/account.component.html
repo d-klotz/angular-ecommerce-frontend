@@ -1,22 +1,24 @@
 <div class="container">
-  <h1>{{customer.name}}</h1>
-  <div class="content">
-    <div class="text-group">
-      <span>Address</span>
-      <span >{{customer.address}}</span>
-      <span>{{customer.number}}</span>
+  <div class="card">
+    <h1>{{customer.name}}</h1>
+    <div class="content">
+      <div class="text-group">
+        <span>Address</span>
+        <span >{{customer.address}}</span>
+        <span>{{customer.number}}</span>
+      </div>
+      <div class="text-group">
+        <span>Main payment method </span>
+        <span>{{customer.mainPaymentMethod | paymentMethod}}</span>
+      </div>
+      <div class="text-group">
+        <span>E-mail</span>
+        <span>{{customer.email}}</span>
+      </div>
     </div>
-    <div class="text-group">
-      <span>Main payment method </span>
-      <span>{{customer.mainPaymentMethod | paymentMethod}}</span>
+    <div class="button-group">
+      <app-button modifier="link" (onClick)="goToOrders()">My Orders</app-button>
+      <app-button modifier="primary" (onClick)="goToEditInformation()">Edit Information</app-button>
     </div>
-    <div class="text-group">
-      <span>E-mail</span>
-      <span>{{customer.email}}</span>
-    </div>
-  </div>
-  <div class="button-group">
-    <app-button modifier="link" (onClick)="goToOrders()">My Orders</app-button>
-    <app-button modifier="primary" (onClick)="goToEditInformation()">Edit Information</app-button>
   </div>
 </div>
