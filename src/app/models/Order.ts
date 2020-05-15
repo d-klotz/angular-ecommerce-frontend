@@ -1,7 +1,7 @@
 import { PaymentMethod } from './PaymentMethod';
 import { ShippingMethod } from './ShippingMethod';
-import { CheckoutProduct } from './CheckoutProduct';
 import { ProductQuantity } from './ProductQuantity';
+import { OrderStatus } from './OrderStatus';
 
 export class Order {
   public id?: number;
@@ -9,4 +9,7 @@ export class Order {
   public paymentMethod: PaymentMethod;
   public shippingMethod: ShippingMethod;
   public orderItems: ProductQuantity[];
+  public status: OrderStatus;
+  public creationDate?: Date;
+  public totalAmount?: number;
 }

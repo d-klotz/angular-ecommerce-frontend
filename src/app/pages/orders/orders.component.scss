@@ -5,3 +5,68 @@
   margin: 30px;
   text-align: center;
 }
+
+.card {
+  width: 45vw;
+  min-height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);
+  background-color: var(--color-one);
+  transition: 0.1s;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.id {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.PROCESSING {
+ color: #fbd87f;
+}
+
+.APROVED {
+  color: #2274a5;
+}
+
+.IN_TRANSIT {
+  color: #2274a5;
+}
+
+.DELIVERED {
+  color: #7dd181;
+}
+
+@media only screen
+  and (min-device-width: 736px)
+  and (max-device-width: 2000px){
+    .card  {
+      width: 60vw;
+    }
+  }
+
+@media only screen
+  and (min-device-width: 582px)
+  and (max-device-width: 736px){
+  .card  {
+    width: 80vw;
+  }
+}
+
+@media only screen
+  and (min-device-width: 200px)
+  and (max-device-width: 582px){
+    .card  {
+      width: 80vw;
+      min-height: 150px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }

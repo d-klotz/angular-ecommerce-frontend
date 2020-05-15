@@ -1,9 +1,10 @@
-import { Injectable, Input } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, Subject } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Order } from '../models/Order';
 import { BASE_URL } from '../app.api';
 import { ProductQuantity } from '../models/ProductQuantity';
+import { ApiResponse } from '../models/ApiResponse';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,8 @@ export class OrderService {
 
   private _productQuantity: ProductQuantity[];
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient) { }
 
   createOrder(order: Order): Observable<Order> {
     return this.http.post<Order>(`${BASE_URL}/api/order`, order);
@@ -31,7 +33,7 @@ export class OrderService {
     this._productQuantity = productQuantityList;
   }
 
-  public getOrdersByUser() {
-    return this.http.get<Order[]>(`${BASE_URL}/api/order`);
+  public getOrdersByUser(): Observable<ApiResponse<Order[]>> {
+    return this.http.get<ApiResponse<Order[]>>(`${BASE_URL}/api/order`);
   }
 }

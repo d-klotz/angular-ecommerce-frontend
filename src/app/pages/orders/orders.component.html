@@ -1,4 +1,9 @@
 <div class="container">
   <h1>Orders</h1>
-  <h3>Your orders here</h3>
+  <div *ngFor="let order of orders" class="card">
+    <div class="id">#{{order.id}}</div>
+    <div>{{order.totalAmount | currency: 'USD' : 'symbol'}}</div>
+    <div>{{order.creationDate | date: 'dd/MM/yyyy'}}</div>
+    <fa-icon [icon]="faDotCircle" [class]="order.status"></fa-icon>
+  </div>
 </div>

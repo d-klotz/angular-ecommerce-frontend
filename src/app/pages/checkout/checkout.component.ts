@@ -9,6 +9,7 @@ import { ShippingMethod } from 'src/app/models/ShippingMethod';
 import { Order } from 'src/app/models/Order';
 import { ObservableService } from 'src/app/services/observable.service';
 import { OrderService } from 'src/app/services/order.service';
+import { OrderStatus } from 'src/app/models/OrderStatus';
 
 @Component({
   selector: 'app-checkout',
@@ -76,7 +77,8 @@ export class CheckoutComponent implements OnInit {
       customerId: this.customer.id,
       paymentMethod: this.checkoutForm.get('paymentMethod').value,
       shippingMethod: this.checkoutForm.get('shippingMethod').value,
-      orderItems: this.orderService.getProductsToCheckout()
+      orderItems: this.orderService.getProductsToCheckout(),
+      status: OrderStatus.PROCESSING
     }
     this.orderService.createOrder(order).subscribe(() => {
       this.observableService.cleanCart();
