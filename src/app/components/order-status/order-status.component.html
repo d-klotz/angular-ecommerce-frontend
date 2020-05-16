@@ -1,0 +1,13 @@
+<div class="container">
+    <fa-icon [icon]="faClipboardList" class="icon"
+    [ngClass]="{'active': currentStatus === 'DELIVERED' || currentStatus === 'IN_TRANSIT' || currentStatus === 'APROVED' || currentStatus === 'PROCESSING'}"></fa-icon>
+    <span class="bar"></span>
+    <fa-icon [icon]="faClipboardCheck" class="icon"
+    [ngClass]="{'active': currentStatus === 'DELIVERED' || currentStatus === 'IN_TRANSIT' || currentStatus === 'APROVED'}"></fa-icon>
+    <span class="bar"></span>
+    <fa-icon [icon]="faTruckMoving" class="icon"
+    [ngClass]="{'active': currentStatus === 'DELIVERED' || currentStatus === 'IN_TRANSIT'}"></fa-icon>
+    <span class="bar"></span>
+    <fa-icon [icon]="faCheckCircle" class="icon"
+    [ngClass]="{'active': currentStatus === 'DELIVERED'}"></fa-icon>
+  </div>

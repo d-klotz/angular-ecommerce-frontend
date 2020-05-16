@@ -1,6 +1,6 @@
 <div class="container">
   <h1>Orders</h1>
-  <div *ngFor="let order of orders" class="card">
+  <div *ngFor="let order of orders" class="card" (click)="goToDetails(order.id)">
     <div class="id">#{{order.id}}</div>
     <div>{{order.totalAmount | currency: 'USD' : 'symbol'}}</div>
     <div>{{order.creationDate | date: 'dd/MM/yyyy'}}</div>

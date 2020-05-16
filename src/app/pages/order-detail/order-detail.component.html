@@ -1,1 +1,38 @@
-<p>order-detail works!</p>
+<div class="container">
+  <h1 *ngIf="order">Order #{{order.id}}</h1>
+  <div class="card">
+    <app-order-status [currentStatus]="order.status"></app-order-status>
+      <h2>Order Details</h2>
+      <div class="label-value">
+        <span class="label">Purchase date</span>
+        <span class="value">{{order.creationDate | date: 'dd/MM/yyyy hh:mm:ss'}}</span>
+      </div>
+      <div class="label-value">
+        <span class="label">Payment Method</span>
+        <span class="value">{{order.paymentMethod}}</span>
+      </div>
+      <div class="label-value">
+        <span class="label">Shipping Method</span>
+        <span class="value">{{order.shippingMethod}}</span>
+      </div>
+      <div class="label-value">
+        <span class="label">Total</span>
+        <span class="value">{{order.totalAmount | currency: 'USD' : 'symbol'}}</span>
+      </div>
+      <h2>Order Items</h2>
+      <div *ngFor="let product of orderProducts" class="product-container">
+          <img
+            src={{product.mainImage}}/>
+          <div class="name"><a (click)="goToProductDetail(product.id)">{{product.name}}</a></div>
+          <div class="quantity">
+            {{product.quantity}}
+          </div>
+          <div class="price">
+            <chip
+              [value]="product.value() | currency: 'USD' : 'symbol'"
+              modifier="product-price"
+            ></chip>
+          </div>
+        </div>
+  </div>
+</div>
