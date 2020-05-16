@@ -1,5 +1,8 @@
 <div class="container">
   <h1>Orders</h1>
+  <app-empty-state [icon]="faExclamationCircle" text="Your have no orders yet." subText="Make a purchase to see your order here." [show]="orders.length === 0">
+    <app-button modifier="primary" (onClick)="goToProducts()">Shop now</app-button>
+  </app-empty-state>
   <div *ngFor="let order of orders" class="card" (click)="goToDetails(order.id)">
     <div class="id">#{{order.id}}</div>
     <div>{{order.totalAmount | currency: 'USD' : 'symbol'}}</div>

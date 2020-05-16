@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
 import { Product } from 'src/app/models/Product';
 import { ObservableService } from 'src/app/services/observable.service';
-import { Category } from 'src/app/models/Category';
 import { Router } from '@angular/router';
+import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home',
@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   public products: Product[];
+  public faExclamationCircle = faExclamationCircle;
 
   constructor(
      private productService: ProductService,

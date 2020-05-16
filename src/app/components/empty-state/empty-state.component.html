@@ -1,0 +1,8 @@
+<div *ngIf="show" class="container">
+  <fa-icon [icon]="icon" class="icon"></fa-icon>
+  <span class="text">{{text}}</span>
+  <span class="subtext">{{subText}}</span>
+  <div class="content">
+    <ng-content></ng-content>
+  </div>
+</div>

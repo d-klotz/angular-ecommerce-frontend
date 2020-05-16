@@ -1,5 +1,8 @@
 <div class="container">
   <h1>Your Cart</h1>
+  <app-empty-state [icon]="faExclamationCircle" text="Your cart is empty." subText="Try to add a product into the cart." [show]="selectedProducts.length === 0">
+    <app-button modifier="primary" (onClick)="goToProducts()">Shop now</app-button>
+  </app-empty-state>
   <div *ngFor="let product of selectedProducts">
     <div class="order-card">
       <img
@@ -21,5 +24,5 @@
       </div>
     </div>
   </div>
-  <app-order-summary (onButtonClick)="goToCheckout()">{{getSummary() | currency: 'USD': 'symbol'}}</app-order-summary>
+  <app-order-summary [show]="selectedProducts.length > 0"(onButtonClick)="goToCheckout()">{{getSummary() | currency: 'USD': 'symbol'}}</app-order-summary>
 </div>

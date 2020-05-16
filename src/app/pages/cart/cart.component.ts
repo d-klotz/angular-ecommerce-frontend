@@ -4,6 +4,7 @@ import { ProductService } from 'src/app/services/product.service';
 import { ObservableService } from 'src/app/services/observable.service';
 import { Router } from '@angular/router';
 import { OrderService } from 'src/app/services/order.service';
+import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-cart',
@@ -12,9 +13,9 @@ import { OrderService } from 'src/app/services/order.service';
 })
 export class CartComponent implements OnInit {
 
-
-  selectedProducts: CheckoutProduct[] = [];
-  summary: number;
+  public selectedProducts: CheckoutProduct[] = [];
+  public summary: number;
+  public faExclamationCircle = faExclamationCircle;
 
   constructor(
     private productService: ProductService,
@@ -57,11 +58,11 @@ export class CartComponent implements OnInit {
     return productIds.filter(id => id === productId).length;
   }
 
-  onIncreaseClick(selectedProduct: CheckoutProduct) {
+  public onIncreaseClick(selectedProduct: CheckoutProduct) {
     this.observableService.addProductToCart(selectedProduct);
   }
 
-  onDecreaseClick(selectedProduct: CheckoutProduct) {
+  public onDecreaseClick(selectedProduct: CheckoutProduct) {
     if(selectedProduct.quantity > 1) {
       this.observableService.removeProductFromCart(selectedProduct);
     } else {
@@ -72,16 +73,20 @@ export class CartComponent implements OnInit {
     }
   }
 
-  getSummary():number {
+  public getSummary():number {
     return this.selectedProducts.map(product => product.value())
       .reduce((prev, value) => prev + value, 0);
   }
 
-  goToProductDetail(productId: number) {
+  public goToProductDetail(productId: number) {
     this.router.navigate([`details/${productId}`])
   }
 
-  goToCheckout() {
+  public goToCheckout() {
     this.router.navigate(['checkout']);
+  }
+
+  public goToProducts() {
+    this.router.navigate(['/']);
   }
 }

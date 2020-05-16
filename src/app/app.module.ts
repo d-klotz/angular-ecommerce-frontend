@@ -32,6 +32,7 @@ import { CartComponent } from './pages/cart/cart.component';
 import { OrderSummaryComponent } from './components/order-summary/order-summary.component';
 import { ThanksComponent } from './pages/thanks/thanks.component';
 import { OrderStatusComponent } from './components/order-status/order-status.component';
+import { EmptyStateComponent } from './components/empty-state/empty-state.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { OrderStatusComponent } from './components/order-status/order-status.com
     OrderSummaryComponent,
     ThanksComponent,
     OrderStatusComponent,
+    EmptyStateComponent,
   ],
   imports: [
     BrowserModule,

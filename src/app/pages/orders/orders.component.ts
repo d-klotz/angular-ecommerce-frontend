@@ -3,6 +3,7 @@ import { OrderService } from 'src/app/services/order.service';
 import { Order } from 'src/app/models/Order';
 import { faDotCircle } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
+import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-orders',
@@ -13,6 +14,7 @@ export class OrdersComponent implements OnInit {
 
   public orders: Order[] = [];
   public faDotCircle = faDotCircle;
+  public faExclamationCircle = faExclamationCircle;
 
   constructor(
     private orderService: OrderService,
@@ -30,5 +32,9 @@ export class OrdersComponent implements OnInit {
 
   public goToDetails(orderId) {
     this.router.navigate([`orders/${orderId}`], orderId);
+  }
+
+  public goToProducts() {
+    this.router.navigate(['/']);
   }
 }

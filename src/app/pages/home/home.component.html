@@ -1,4 +1,5 @@
 <div class="products">
+  <app-empty-state [icon]="faExclamationCircle" text="Oops, looks like we ran out of this category" subText="Try to come back tomorrow." [show]="products.length === 0"></app-empty-state>
   <div *ngFor="let product of products">
     <card>
       <div class="product-item">

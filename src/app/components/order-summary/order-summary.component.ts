@@ -7,6 +7,7 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 })
 export class OrderSummaryComponent implements OnInit {
   @Output() onButtonClick = new EventEmitter<any>();
+  @Input() show: boolean;
 
   constructor() { }
 

@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+
+.text {
+  font-size: 25px;
+  font-weight: 600;
+  margin: 5px;
+}
+
+.subtext {
+  font-size: 20px;
+  color: var(--color-five);
+  margin: 5px;
+}
+
+.icon {
+  font-size: 35px;
+}
+
+.content {
+  margin: 20px;
+}
