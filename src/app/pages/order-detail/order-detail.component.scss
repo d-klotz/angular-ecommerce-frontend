@@ -112,4 +112,15 @@ img {
       align-items: center;
       justify-content: space-around;
     }
+    .label-value {
+      flex-direction: column;
+    }
+    .label {
+      margin-bottom: 5px;
+    }
+    .product-container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
