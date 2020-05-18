@@ -11,17 +11,21 @@ import { OrderDetailComponent } from './pages/order-detail/order-detail.componen
 import { AboutComponent } from './pages/about/about.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { ThanksComponent } from './pages/thanks/thanks.component';
+import { LoggedInGuard } from './security/loggedin.guard';
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'details/:id', component: DetailsComponent },
-  { path: 'checkout', component: CheckoutComponent },
+  { path: 'checkout', component: CheckoutComponent,
+    canLoad: [LoggedInGuard], canActivate: [LoggedInGuard] },
   { path: 'cart', component: CartComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'login/:to', component: LoginComponent },
   { path: 'new-account', component: NewAccountComponent },
   { path: 'account', component: AccountComponent },
-  { path: 'orders', component: OrdersComponent },
+  { path: 'orders', component: OrdersComponent,
+  canLoad: [LoggedInGuard], canActivate: [LoggedInGuard] },
   { path: 'orders/:id', component: OrderDetailComponent },
   { path: 'about', component: AboutComponent },
   { path: 'thanks', component: ThanksComponent },

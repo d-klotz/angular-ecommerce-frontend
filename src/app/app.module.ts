@@ -33,6 +33,7 @@ import { OrderSummaryComponent } from './components/order-summary/order-summary.
 import { ThanksComponent } from './pages/thanks/thanks.component';
 import { OrderStatusComponent } from './components/order-status/order-status.component';
 import { EmptyStateComponent } from './components/empty-state/empty-state.component';
+import { LoggedInGuard } from './security/loggedin.guard';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,9 @@ import { EmptyStateComponent } from './components/empty-state/empty-state.compon
     ReactiveFormsModule
   ],
   providers: [
-    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi:true}],
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi:true},
+    LoggedInGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
