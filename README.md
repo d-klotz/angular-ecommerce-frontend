@@ -25,4 +25,4 @@
 
 <hr />
 
-### <a href="http://linkedin.com/in/danielfelipeklotz">Connect me in LinkedIn</a>
+### <a href="http://linkedin.com/in/danielfelipeklotz">Contact me on LinkedIn</a>
