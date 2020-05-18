@@ -1,27 +1,28 @@
-# EcommerceFrontend
+<p align="center">
+<img src="src/assets/img/logo2.svg" />
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
+# iPeach e-commerce <br/>
 
-## Development server
+### This is an angular project made for fun.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+<img src="screenshots/presentation.png" />
 
-## Code scaffolding
+### :electric_plug: Requeriments
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Node.JS >= 12.16.2
+- NPM >= 6.14.4
 
-## Build
+### :camera: <a href="SCREENSHOTS.md">Click here to see the project screenshots</a>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+<hr />
 
-## Running unit tests
+### :computer: Getting started 
+- npm i
+- npm start
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+:heavy_exclamation_mark: The project will start on port 4200
 
-## Running end-to-end tests
+<hr />
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### <a href="http://linkedin.com/in/danielfelipeklotz">Connect me in LinkedIn</a>
