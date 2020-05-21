@@ -6,7 +6,7 @@
 
 ### This is an angular project made for fun.
 
-<img src="screenshots/presentation.png" />
+<img src="screenshots/presentation_cover.png" />
 
 ### :electric_plug: Requeriments
 
