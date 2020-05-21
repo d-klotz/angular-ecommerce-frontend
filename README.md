@@ -20,6 +20,7 @@
 ### :computer: Getting started 
 - npm i
 - npm start
+- [Start the backend](https://github.com/d-klotz/java-spring-ecommerce-backend)
 
 :heavy_exclamation_mark: The project will start on port 4200
 
